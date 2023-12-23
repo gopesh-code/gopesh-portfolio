@@ -1,5 +1,5 @@
 ---
-name: Gopesh's Website
+name: Deployment of App
 on:
   push:
     branches: [ main ]
