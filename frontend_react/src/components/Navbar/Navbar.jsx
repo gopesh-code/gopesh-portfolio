@@ -4,6 +4,7 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 import { images } from "../../constants";
+import DarkModeToggle from '../../components/DarkModeToggle';
 
 import "./Navbar.scss";
 
@@ -78,6 +79,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
+      <DarkModeToggle />
     </nav>
   );
 };
