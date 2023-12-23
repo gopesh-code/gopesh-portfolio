@@ -33,7 +33,7 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-              First, solve the <span>problem.</span>
+              First, solve them <span>problem.</span>
         <br />
               Then write the <span>code.</span>
       </h2>
