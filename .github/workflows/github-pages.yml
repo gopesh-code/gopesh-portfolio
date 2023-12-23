@@ -17,7 +17,10 @@
   
       - name: Test
         run: npm run test
-  
+
+      - name: Clear npm cache
+        run: npm cache clean --force
+        
       - name: Deploy
         run: |
           git config --global user.name 'gopesh-code'
