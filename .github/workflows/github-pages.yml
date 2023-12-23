@@ -21,6 +21,7 @@
         run: npm cache clean --force
         
       - name: Deploy
+        working-directory: C:\Users\gopes\OneDrive\Desktop\gopesh\frontend_react
         run: |
           git config --global user.name 'gopesh-code'
           git config --global user.email 'gopeshkumarpathak@gmail.com'
