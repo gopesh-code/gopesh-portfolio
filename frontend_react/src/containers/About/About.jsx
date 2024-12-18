@@ -7,6 +7,24 @@ import { images } from "../../constants";
 import { client, urlFor } from "../../client";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
+import { CoolMode } from "./cool-mode";
+
+export function CoolModeDemo() {
+  return (
+    <div className="portfolio-button">
+      <CoolMode>
+          <a
+              className="portfolio-button"
+              href="https://www.github.com/gopesh-code"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Github</span>
+            </a>
+      </CoolMode>
+    </div>
+  );
+}
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -54,26 +72,23 @@ const About = () => {
         </div>
         <div className="app__about-data app__flex">
           <h2 className="head-text">About Me</h2>
-          <p className="p-text">
-            Hi! I'm <span>Gopesh</span> - a Java virtuoso with a distinct{" "}
-            <span>backend development</span> inclination. Beyond the conventional
-            realm of developers, I embody a{" "}
-            <span>result-focused</span> architect, meticulously constructing{" "}
-            <span>efficient backend systems</span>, unraveling complicated
-            problems reminiscent of enigmatic puzzles, and collaborating with{" "}
-            <span>front-end collaborators</span>. From the meticulous
-            calibration of <span>APIs</span> to the orchestration of intricate{" "}
-            <span>database systems</span>, I am driven by the art of optimizing
-            the intricate ballet of technology. In <span>pursuit of a role</span>{" "}
-            that seamlessly blend my technical skills with a nuanced touch of
-            whimsy, for I believe innovation and precision are inextricably
-            intertwined. <span>Let's code, conquer, and giggle through the
-            digital realm!</span>
-          </p>
+          <div><p className="p-text">
+          Hi! I'm <span>Gopesh</span> – a passionate <span>Java backend developer</span> with a knack for building <span>efficient, scalable systems</span>. I specialize in architecting robust <span>APIs</span> and orchestrating seamless <span>database integrations</span>, tackling complex problems with precision and creativity.
+          With a strong foundation in <span>backend development</span>, I thrive on <span>collaboration</span>, ensuring my systems integrate flawlessly with <span>front-end teams</span>. Whether it’s optimizing performance, debugging intricate workflows, or crafting solutions that drive results, I bring a blend of technical expertise and problem-solving finesse.
+          I’m on the lookout for a role that challenges me to innovate and deliver impactful solutions. <span>Let’s build, optimize, and transform ideas into reality!</span>
+          </p></div>
           <div>
             <button className="portfolio-button" onClick={viewResumeHandler}>
               <span>Resume</span>
             </button>
+            <a
+              className="portfolio-button"
+              href="https://gopesh-code.github.io/Beyond-the-Byte/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Blog</span>
+            </a>
             <a
               className="portfolio-button"
               href="https://www.linkedin.com/in/gopeshkumarpathak"
@@ -102,6 +117,8 @@ const About = () => {
         </div>
       </div>
 
+      
+
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
@@ -125,6 +142,7 @@ const About = () => {
     </>
   );
 };
+
 
 export default AppWrap(
   MotionWrap(About, "app__about"),

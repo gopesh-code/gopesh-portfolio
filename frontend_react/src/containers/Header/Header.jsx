@@ -45,7 +45,7 @@ const headerSkillVariants = {
 
 const Header = () => {
     const [ typeEffect ] = useTypewriter({
-    words: ['Software Developer', 'Backend Developer', 'React Developer', 'Student'],
+    words: ['Software Developer', 'Backend Developer', 'Student'],
     typeSpeed: 50,
       loop: false,
   });

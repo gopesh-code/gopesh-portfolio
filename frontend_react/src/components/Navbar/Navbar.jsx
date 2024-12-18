@@ -37,15 +37,26 @@ const Navbar = () => {
         <img src={images.logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "work", "skills", "testimonials", "contact"].map(
+        {["home", "about", "work", "blog", "skills", "testimonials", "contact"].map(
           (item) => (
             <li
               key={`link-${item}`}
               className={`app__flex p-text ${active === item ? "active" : ""}`}
             >
+            {item === "blog" ? (
+              <a
+                href="https://gopesh-code.github.io/Beyond-the-Byte/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setActive(item)}
+              >
+                {item}
+              </a>
+              ) : (
               <a href={`#${item}`} onClick={() => setActive(item)}>
                 {item}
               </a>
+              )}
             </li>
           )
         )}
@@ -67,13 +78,25 @@ const Navbar = () => {
                 "skills",
                 "testimonials",
                 "contact",
+                "blog",
               ].map((item) => (
                 <li key={item}>
+                  {item === "blog" ? (
+                  <a
+                    href="https://gopesh-code.github.io/Beyond-the-Byte/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setToggle(false)}
+                  >
+                    {item}
+                  </a>
+                ) : (
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}
                   </a>
-                </li>
-              ))}
+              )}
+              </li>
+            ))}
             </ul>
           </motion.div>
         )}
